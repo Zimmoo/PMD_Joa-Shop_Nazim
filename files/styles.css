@@ -40,8 +40,6 @@ header nav ul {
   background-color: #ff845a;
 
   list-style: none;
-  margin: 0;
-  padding: 0;
   border-radius: 15px;
 }
 header nav li {
@@ -107,8 +105,6 @@ section span {
   font-weight: bold;
 }
 section div ul {
-  padding: 0;
-  margin: 0;
   display: flex;
 }
 section div ul li {
@@ -120,8 +116,6 @@ section li i {
   color: #ffd86b;
 }
 section div p {
-  margin: 0;
-  padding: 0;
   font-size: 13px;
 }
 section div em {
@@ -258,4 +252,47 @@ section button {
 }
 #perso li:nth-child(3){
   background-color: red;
+}
+.description_produit {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.description_produit h1 {
+  color:#ff845a;
+}
+
+.description_produit p {
+  text-align: center
+} 
+#slider_3montres {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  width: 100%
+  
+}
+#slider_3montres h2 {
+  text-align: center;
+}
+
+#slider_3montres li {
+    width: 15px;
+    height: 15px;
+    border: 2px #ff845a solid;
+    border-radius: 100%;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+#slider_3montres li:nth-child(2) {
+  background-color: #ff845a;
+}
+
+#achetez_en_toute_confiance {
+  display: flex;
+  flex-direction: column;
+}
+#achetez_en_toute_confiance li {
+  text-align: center;
 }
