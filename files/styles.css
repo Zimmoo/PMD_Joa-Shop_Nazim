@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Roboto';
 }
 
 ul {
@@ -12,59 +13,88 @@ p {
   padding: 0;
 }
 
-/**********/
-/**HEADER**/
-/**********/
-
+/************/
+/** HEADER **/
+/************/
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* #ffd38a #ff845a */
-  /*TOP RIGHT BOTTOM LEFT*/
   padding: 10px;
   background: linear-gradient(to right, #ffd38a, #ff845a);
-  /*  RIGHT BOTTOM*/
   box-shadow: 4px 4px 4px silver;
 }
+
 header h1 {
   margin: 0;
-
   font-size: 25px;
   color: white;
 }
 
-header nav ul {
+#small-nav ul {
   display: none;
   position: absolute;
   background-color: #ff845a;
-
   list-style: none;
   border-radius: 15px;
 }
-header nav li {
+
+#small-nav li {
   padding: 5px 20px 5px 20px;
   color: white;
   font-size: 14px;
   font-weight: bold;
 }
-header nav li:hover {
+
+#small-nav li:hover {
   background-color: #ffd38a;
 }
 
-header nav {
+#small-nav:hover ul {
+  display: block;
 }
 
-header nav:hover ul {
-  display: block;
+#large-nav {
+  display: none;
 }
 
 header i {
   color: white;
+  margin: 0 10px 0 10px;
 }
 
+header i:nth-child(2), header i:nth-child(3) {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  #show-menu {
+    display: none;
+  }
+  #large-nav {
+    display: block;
+  }
+  #large-nav ul {
+    display: flex;
+  }
+  #large-nav li {
+    list-style: none;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  header i:nth-child(2), header i:nth-child(3) {
+    display: inline;
+  }
+}
+#nous_suivre i {
+  margin: 0 10px 0 10px;
+}
+
+
 /**********/
-/**PATH**/
+/** PATH **/
 /**********/
 
 #path {
@@ -76,7 +106,7 @@ header i {
 
 #path li {
   list-style: none;
-  font-size: 12px;
+  font-size: 10px;
   margin: 15px 0 15px 0s;
   
 }
@@ -85,9 +115,19 @@ header i {
   margin: 0 5px 0 5px;
 }
 
+@media only screen and (min-width: 992px) {
+  #path {
+    padding: 20px 50px 20px 50px;
+  }
+  #path i {
+    font-size: 25px;
+  }
+}
+
 /**********/
 /**SECTION**/
 /**********/
+
 section div {
   display: flex;
   justify-content: space-between;
@@ -99,6 +139,9 @@ section h2 {
   margin: 0;
   color:#ff845a;
 }
+#price-desktop {
+  display: none;
+}
 
 section span {
   font-size: 20px;
@@ -109,8 +152,6 @@ section div ul {
 }
 section div ul li {
   list-style: none;
-  
-
 }
 section li i {
   color: #ffd86b;
@@ -168,9 +209,11 @@ section div img {
   margin: 0 5px 0 5px;
   
 }
+
 #colorier {
   background-color: #ff845a;
 }
+
 section button {
   border-width: 0;
   color: white;
@@ -236,6 +279,7 @@ section button {
 #perso ul {
   justify-content: center;
 }
+
 #perso li {
   width: 50px;
   height: 50px;
@@ -260,6 +304,10 @@ section button {
   padding-bottom: 20px;
 }
 
+#description_produit_desktop {
+  display: none;
+}
+
 .description_produit h1 {
   color:#ff845a;
 }
@@ -279,8 +327,8 @@ section button {
   text-align: center;
 }
 
-#slider_3montres p {
-  text-align: center;
+#dots2 {
+  margin: 20px 0 20px 0;
 }
 
 #dots2 li {
@@ -295,14 +343,16 @@ section button {
   background-color: #ff845a;
 }
 
-
-
 #achetez_en_toute_confiance {
   display: flex;
   flex-direction: column;
 }
 #achetez_en_toute_confiance li {
   text-align: center;
+}
+
+#details {
+  display: none;
 }
 
 /* OTHERS */
@@ -315,6 +365,20 @@ section button {
   width: 55px;
   height: 55px;
 }
+
+#slider_3montres img {
+  width: 120px;
+  height: 120px;
+}
+
+#slider_3montres span {
+  display: block;
+  font-size: 10px;
+  text-align: center;
+}
+
+
+
 #others td {
   text-align: center;
   width: 150px;
@@ -336,6 +400,31 @@ footer a {
   text-decoration: none;
 
 }
+footer ul {
+  width: 100%;
+}
+
+footer ul:nth-child(1) {
+  margin-right: 100px;
+  margin-left: 15px;
+}
+
+
+
+#text_newsletter {
+  display: flex;
+  justify-content: center;
+}
+
+#text_newsletter p {
+  text-align: center;
+  margin-top: 2px;
+}
+
+#back_to_top {
+  display: flex;
+  justify-content: flex-end;
+}
 
 footer ul {
   width: 100%;
@@ -354,17 +443,173 @@ footer div {
   display: flex;
 }
 
-#text_newsletter {
-  display: flex;
-  justify-content: center;
+#table {
+  display: none;
 }
 
-#text_newsletter p {
-  text-align: center;
-  margin-top: 2px;
+#enStock-desktop {
+  display: none;
 }
 
-#back_to_top {
-  display: flex;
-  justify-content: center;
+#footer-desktop {
+  display: none;
+}
+
+/* For desktop version */
+#main-product-large-container {
+  display: none;
+  margin-right: 50px;
+}
+
+@media only screen and (min-width: 992px) {
+  #main-product-large-container {
+    display: flex;
+  }
+  #main-product-large-container ul {
+    display: block;
+  }
+  #main-product-large {
+    width: 500px;
+    height: 500px;
+  }
+  #main-product-large-container li {
+    list-style: none;
+    margin: 20px 0 20px 0;
+  }
+  #main-product-large-container li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+  #main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  #main_product {
+    display: none;
+  }
+  #next, #prev, #dots {
+    display: none;
+  }
+  #price-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  #price-desktop span {
+    text-align: left;
+  }
+  #price-mobile {
+    display: none;
+  }
+  #perso {
+    width: 150px;
+    padding: 20px;
+  }
+  #perso p {
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #perso ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  #perso li {
+    width: 40px;
+    height: 40px;
+  }
+
+  table {
+    display: none;
+  }
+
+  #table {
+    display: flex;
+    padding: 20px;
+  }
+
+  #achetez_en_toute_confiance {
+    padding: 20px;
+  }
+
+  #table li {
+    margin: 0 30px 0 30px;
+  }
+
+  .description_produit {
+    display: none;
+  }
+  
+  #description_produit_desktop {
+    display: block;
+    text-align: center;
+    padding: 0 50px 0 50px;
+  }
+
+  #description_produit_desktop h1 {
+    font-size: 20px;
+  }
+
+  #note_number {
+    display: none;
+  }
+
+  #note_stars {
+    display: none;
+  }
+
+  #details {
+    display: block;
+    margin-top: 10px;
+  }
+
+  #ref {
+    display: block;
+  }
+
+  #avis {
+    display: none;
+  }
+
+  #enStock {
+    display: none;
+  }
+
+  #enStock-desktop {
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  #footer-mobile {
+    display: none;
+  }
+
+  #footer-desktop {
+    display: flex;
+    padding: 20px 50px 20px 50px;
+  }
+
+  #slider_3montres {
+    margin-top: 50px;
+  }
+
+  #slider_3montres b {
+    font-size: 15px;
+  }
+
+  #slider_3montres li {
+    margin: 20px 50px 50px 50px;
+  }
+
+  #dots2 {
+    display: none;
+  }
+
 }
