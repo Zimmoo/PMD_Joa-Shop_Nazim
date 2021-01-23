@@ -279,6 +279,10 @@ section button {
   text-align: center;
 }
 
+#slider_3montres p {
+  text-align: center;
+}
+
 #dots2 li {
     width: 10px;
     height: 10px;
@@ -348,4 +352,23 @@ footer p {
 }
 footer div {
   display: flex;
+}
+
+#text_newsletter {
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+#text_newsletter p {
+  text-align: center;
+  margin-top: 2px;
+  
+}
+
+#back_to_top {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
 }
