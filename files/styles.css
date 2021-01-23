@@ -357,18 +357,14 @@ footer div {
 #text_newsletter {
   display: flex;
   justify-content: center;
-  
-
 }
 
 #text_newsletter p {
   text-align: center;
   margin-top: 2px;
-  
 }
 
 #back_to_top {
   display: flex;
   justify-content: center;
-  background-color: blue;
 }
